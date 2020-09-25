@@ -1,0 +1,43 @@
+.nav {
+	position: fixed;
+	top: 0;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	padding: 25px 20px 20px 20px;
+	z-index: 1;
+	transition: all ease-in 0.5s;
+}
+
+.nav__black {
+	background-color: #111;
+	height: 50px;
+}
+
+.nav__logo {
+	object-fit: contain;
+	width: 90px;
+	left: 20px;
+	position: fixed;
+}
+
+.nav__avatar {
+	width: 30px;
+	object-fit: contain;
+	position: fixed;
+	right: 20px;
+}
+
+.nav__right {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.nav__right > p {
+	color: #fff;
+	position: fixed;
+	right: 70px;
+	font-size: 10px;
+}

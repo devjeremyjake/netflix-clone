@@ -1,0 +1,74 @@
+.row {
+	margin: 0 10px;
+	color: #ffffff;
+}
+
+.row__posters {
+	display: flex;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	padding: 20px;
+}
+
+.row__posters::-webkit-scrollbar {
+	display: none;
+}
+
+.row__posters {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.row__poster {
+	width: 100%;
+	object-fit: contain;
+	max-height: 150px;
+	transition: transform 450ms;
+	margin-right: 10px;
+}
+
+.row__poster:hover {
+	transform: scale(1.08);
+	opacity: 1;
+}
+
+.row__posterLarge {
+	max-height: 250px;
+}
+
+.row__posterLarge:hover {
+	transform: scale(1.09);
+	opacity: 1;
+}
+
+.details__content {
+	padding: 20px;
+}
+
+.details__content > h2 {
+	font-size: 20px;
+	letter-spacing: 1px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.details__content > p {
+	margin-bottom: 9px;
+}
+
+.details__content > h5 {
+	font-size: 15px;
+	padding-bottom: 2px;
+}
+
+.details__content > h5 > span {
+	font-size: 12px;
+	font-weight: 400;
+	color: #eee;
+}
+
+.details__content > img {
+	width: 100%;
+	max-height: 200px;
+	object-fit: contain;
+}

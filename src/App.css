@@ -1,38 +1,324 @@
-.App {
-  text-align: center;
+* {
+	margin: 0;
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+	background-color: #000000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app__header {
+	background: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.514) 80%,
+			rgba(0, 0, 0, 0.747)
+		),
+		url('https://assets.nflxext.com/ffe/siteui/vlv3/70731dc8-8977-4ed7-9a0a-421f510aea00/ac279a83-0588-4390-9f16-680b4b59ec4a/NG-en-20200914-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+	background-position: top center;
+	background-size: cover;
+	border-bottom: 10px solid #222;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app__nav {
+	height: 10vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.app__logo {
+	width: 120px;
+	object-fit: contain;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app__button {
+	display: inline-block;
+	background: #e50914;
+	color: #fff;
+	padding: 10px 30px;
+	font-size: 1rem;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	transition: opacity 0.2s ease-in;
+	outline: none;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+	border-radius: 2px;
+}
+
+.app__banner {
+	height: 90vh;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	margin-top: -10px;
+}
+
+.app__content > h1 {
+	font-size: 55px;
+	padding: 0;
+}
+
+.app__content > h2 {
+	font-size: 50px;
+	padding: 0;
+}
+
+.app__content > h4 {
+	font-size: 30px;
+	font-weight: 500;
+	margin-bottom: 30px;
+	letter-spacing: 3px;
+}
+
+.app__content > p {
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+
+.app__signup {
+	display: flex;
+	flex: 1;
+}
+
+.app__searchInput {
+	width: 100%;
+	height: 60px;
+	padding: 15px;
+	border: none;
+}
+
+.app__searchInput::placeholder {
+	font-size: 15px;
+}
+
+.app__searchInput:focus {
+	outline: none;
+	font-size: 15px;
+}
+
+.app__searchIcon {
+	display: flex;
+	align-items: center;
+	width: 260px;
+	height: 60px !important;
+	outline: none;
+	border: none;
+	padding: 10px;
+	font-size: 25px;
+	color: #fff;
+	background-color: #e50914;
+}
+
+.app__Profile {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 40px 50px;
+	border-bottom: 10px solid #222;
+}
+
+.app__profileImg {
+	max-width: 100%;
+	object-fit: contain;
+}
+
+.app__profiledesc {
+	color: #fff;
+	width: 40%;
+}
+
+.app__profiledesc > h3 {
+	font-size: 50px;
+	margin-bottom: 15px;
+}
+
+.app__profiledesc > p {
+	font-size: 25px;
+	line-height: 1.5;
+}
+
+.content {
+	width: 48%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.video__img {
+	position: relative;
+	max-width: 100%;
+	height: auto;
+	z-index: 3;
+	border: 0;
+}
+
+.video-container {
+	width: 100%;
+	height: 100%;
+	max-width: 76%;
+	max-height: 56%;
+	position: absolute;
+	top: 20%;
+	left: 12%;
+}
+
+.our-story-card-video {
+	width: 100%;
+	height: 100%;
+}
+
+.app__download {
+	width: 50%;
+	min-height: 100px;
+	position: relative;
+	overflow: hidden;
+}
+
+.app__downloadContent {
+	display: flex;
+	width: 60%;
+	min-height: 100px;
+	background: #000;
+	position: absolute;
+	top: 70%;
+	left: 24%;
+	border: 2.5px solid rgba(255, 255, 255, 0.25);
+	box-shadow: 0 0 2px 0 #000;
+	margin: 0 auto;
+	padding: 10px;
+	z-index: 2;
+	border-radius: 6px;
+	align-items: center;
+	flex-grow: 1;
+	flex-shrink: 1;
+	transform: translateX(-10%);
+}
+
+.app__downloadContent::after {
+	width: 3em;
+	height: 3em;
+	outline: 2px solid #000;
+	outline-offset: -2px;
+	display: block;
+	background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif)
+		center center no-repeat;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100%;
+	background-size: 100%;
+	content: '';
+	-webkit-box-flex: 0;
+	-webkit-flex-grow: 0;
+	-moz-box-flex: 0;
+	-ms-flex-positive: 0;
+	flex-grow: 0;
+	-webkit-flex-shrink: 0;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+}
+
+.app__downloadstory {
+	min-height: 100px;
+	width: 100%;
+}
+
+.app__downloadstory > img {
+	width: 70px;
+	object-fit: contain;
+}
+
+.app__storyText {
+	font-size: 17px;
+	letter-spacing: 1px;
+}
+
+.app__storyText > h5 {
+	color: #fff;
+}
+
+.app__storyText > p {
+	color: #0071eb;
+	font-size: 18px;
+}
+
+.video-container-desktop {
+	width: 100%;
+	height: 100%;
+	max-width: 62%;
+	max-height: 47%;
+	position: absolute;
+	top: 34%;
+	left: 49%;
+	transform: translate(-50%, -50%);
+}
+
+.our-story-card-video-desktop {
+	width: 100%;
+	height: 100%;
+}
+
+.app__ProfileAccordian {
+	border-bottom: 10px solid #222;
+}
+
+.app__ProfileAccordian > div {
+	width: 50%;
+	margin: 30px auto;
+}
+
+.app__ProfileAccordian > div > h1 {
+	font-size: 50px;
+	margin-bottom: 30px;
+	color: #fff;
+}
+
+.app__signin {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.app__signin > h3 {
+	color: #fff;
+	font-size: 15px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+.below {
+	width: 100%;
+}
+
+.bottom {
+	width: 100%;
+}
+
+.app__footer {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 40px 50px;
+	color: #757575;
+}
+
+.app__footerBottom {
+	display: flex;
+}
+
+.app__footer > h2 {
+	font-size: 13px;
+	margin-top: 10px;
+}
+
+.app__footerBottom > ul > li {
+	list-style: none;
+	font-size: 13px;
+	padding: 9px 10px;
 }

@@ -1,0 +1,63 @@
+.sublogin__underline {
+	border-bottom: 0.5px solid rgb(105, 103, 103);
+}
+
+.sublogin__nanvbar {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px;
+}
+
+.sublogin__login {
+	font-size: 17px;
+	font-weight: 600;
+	border: none;
+	outline: none;
+	background-color: #fff;
+}
+
+.sublogin__content {
+	width: 30%;
+	margin: 60px auto;
+}
+
+.sublogin__content > h3 {
+	font-size: 25px;
+	color: rgb(90, 87, 87);
+}
+
+.sublogin__content > p {
+	margin-top: 20px;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.email > span {
+	font-size: 19px;
+	color: rgb(90, 87, 87);
+}
+
+.email > h2 {
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 12px;
+}
+
+.email > form > input {
+	width: 100%;
+	height: 50px;
+	outline: none;
+	border: 1px solid rgb(133, 131, 131);
+	border-radius: 2px;
+	padding: 5px 0;
+	margin-bottom: 10px;
+}
+
+.email > form > button {
+	width: 100%;
+	padding: 15px 0;
+	font-size: 18px;
+	background-color: #e50914;
+	color: #fff;
+	border: none;
+}
