@@ -337,6 +337,7 @@
 	}
 
 	.app__Profile {
+		margin: 0 10px;
 		flex-wrap: wrap;
 	}
 
@@ -345,16 +346,38 @@
 	}
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (max-width: 900px) {
 	.app__nav {
 		margin: 0 10px;
 	}
 
 	.app__profiledesc {
-		width: 50%;
+		width: 100%;
+	}
+
+	.app__profiledesc > h3 {
+		font-size: 25px;
 	}
 
 	.app__Profile {
 		flex-wrap: wrap;
+	}
+
+	.app__profiledesc {
+		padding-top: 20px;
+		text-align: center;
+	}
+
+	.app__ProfileAccordian > div {
+		width: 90%;
+		padding: 0 10px;
+	}
+
+	.app__footer {
+		padding: 0 10px;
+	}
+
+	.app__footerBottom {
+		flex-direction: column;
 	}
 }
