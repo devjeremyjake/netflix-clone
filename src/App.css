@@ -322,3 +322,39 @@
 	font-size: 13px;
 	padding: 9px 10px;
 }
+
+@media screen and (max-width: 600px) {
+	.app__nav {
+		margin: 0 10px;
+	}
+
+	.app__content > h1 {
+		font-size: 25px;
+	}
+
+	.app__content > h2 {
+		font-size: 35px;
+	}
+
+	.app__Profile {
+		flex-wrap: wrap;
+	}
+
+	.app__profiledesc {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.app__nav {
+		margin: 0 10px;
+	}
+
+	.app__profiledesc {
+		width: 50%;
+	}
+
+	.app__Profile {
+		flex-wrap: wrap;
+	}
+}

@@ -46,7 +46,6 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
 			<h2>{title}</h2>
 			<div className="row__posters">
 				{/* row posters */}
-				if()
 				{movies.map((movie) => (
 					<img
 						key={movie.id}
